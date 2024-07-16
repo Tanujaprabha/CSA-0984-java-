@@ -1,0 +1,24 @@
+4.Find the year of the given date is leap year or not
+Sample Input:
+Enter Date: 04/11/1947
+Sample Output:
+Given year is Non Leap Year
+
+import java.io.*;
+import java.util.Scanner;
+class leap
+{
+public static void main(String[] args)
+{
+int year;
+Scanner n = new Scanner(System.in);
+System.out.print("enter the year");
+year = n.nextInt();
+if (year%4==0 || year%400==0 && year%100!=0)
+System.out.print(year + " is a leap year");
+else
+System.out.print("still " +(4 - year%4) +  "is left for leap year");
+}
+}
+
+
