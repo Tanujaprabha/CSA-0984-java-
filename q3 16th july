@@ -1,0 +1,29 @@
+3.Write a program using function to calculate the simple interest. Suppose the customer is a senior citizen. He is being offered 12 percent rate of interest; for all other customers, the ROI is 10 percent.
+Sample Input:
+Enter the principal amount: 200000
+Enter the no of years:  3
+Is customer senior citizen (y/n): n
+Sample Output:
+Interest: 60000
+
+import java.io.*;
+import java.util.Scanner;
+class citizen
+{
+public static void main(String[] args)
+{
+int p,N,a;
+String citi;
+Scanner n = new Scanner(System.in);
+System.out.print("enter Principal and year");
+p = n.nextInt();
+N = n.nextInt();
+System.out.print("is customer senior citizen(y/n):");
+citi = n.next();
+if (citi == "y")
+a = (p*N*12)/100;
+else
+a = (p*N*10)/100;
+System.out.print("simple interest is : " +a);
+}
+}
