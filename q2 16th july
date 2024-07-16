@@ -1,0 +1,25 @@
+2. Write a program to find whether the person is eligible for vote or not. And if that particular person is not eligible, then print how many years are left to be eligible.
+Sample Input:
+ Enter your age:
+7
+Sample output:
+You are allowed to vote after 11 years
+
+import java.io.*;
+import java.util.Scanner;
+class age
+{
+public static void main(String[] args)
+{
+int age;
+Scanner n = new Scanner(System.in);
+System.out.print("enter ur age");
+age = n.nextInt();
+if (age > 18)
+System.out.print("your eligiable to vote");
+else
+System.out.print("you have still" +(18 - age) +  "to vote");
+}
+}
+
+
