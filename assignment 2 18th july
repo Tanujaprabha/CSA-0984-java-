@@ -1,0 +1,132 @@
+1.	Write a program to print all the composite numbers between a and b?
+import java.io.*;
+import java.util.Scanner;
+import java.lang.Math;
+class composite
+{
+	public static void main(String[] args)
+	{
+		int a,b,N,i;
+		Scanner n = new Scanner(System.in);
+		System.out.print("enter the value of a and b");
+		a = n.nextInt();
+		b = n.nextInt();
+        	boolean c = false;
+		for(N=a;N<=b;N++){
+			for(i=2;i<=Math.sqrt(N);i++){
+				if(N%i==0){
+					c = true;
+					break;
+				}
+			}
+			if(c){
+				System.out.print(N + " ");
+			}
+		}
+	}
+}
+
+
+2.Find the factorial of n using while loop
+Sample Input:
+N = 4
+Sample Output:
+4 Factorial = 24
+
+import java.io.*;
+import java.util.Scanner;
+class fact
+{
+public static void main(String[] args)
+{
+int f=1,N,i;
+Scanner n = new Scanner(System.in);
+System.out.print("enter the terms");
+N = n.nextInt();
+for(i=1;i<=N;i++)
+{
+f = f*i;
+}
+System.out.print(f);
+}
+}
+
+
+
+3.23.	Find the number of factors for the given number
+Sample Input:
+Given number: 100
+Sample Output:
+Number of factors = 9
+
+import java.io.*;
+import java.util.Scanner;
+class factor
+{
+public static void main(String[] args)
+{
+int N,i,c=0;
+Scanner n = new Scanner(System.in);
+System.out.print("enter the value");
+N = n.nextInt();
+for(i=1;i<=N;i++)
+{
+if(N%i==0)
+{
+c+=1;
+}
+}
+System.out.print(c);
+}
+}
+
+
+4.42.	Write a program to find the square root of a perfect square number(print both the positive and negative values)
+Sample Input:
+Enter the number : 6561
+Sample Output:
+Square Root: 81, -81
+import java.io.*;
+import java.util.*;
+import java.lang.Math;
+class psquare
+{
+public static void main(String[] args)
+{
+int N,r;
+Scanner n = new Scanner(System.in);
+System.out.print("enter the value");
+N = n.nextInt();
+r = (int)(Math.sqrt(N));
+if (r*r == N)
+{
+System.out.print("the square root is : " +r + "  " +(-r));
+}
+}
+}
+
+
+
+5.write a java code for perfect number for 4 digits.
+import java.io.*;
+class prefect{
+    public static void main(String[] args) {
+        int number, i;
+        
+        System.out.print("Four-digit perfect numbers: ");
+        for (number = 1000; number <= 9999; number++) {
+            int sum = 0;  
+            
+            for (i = 1; i <= number / 2; i++) {
+                if (number % i == 0) {
+                    sum += i;                  
+                }
+            }
+
+            if (sum == number) {
+                System.out.print(number + " ");  
+            }
+        }
+    }
+}
+
